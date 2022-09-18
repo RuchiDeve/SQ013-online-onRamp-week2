@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend wk2 Challenge</title>
+</head>
+
+<body>
+<section class="wrapper">
+   <div class="container">
+    <div class="text">
+        <h1>Item Lister</h1>
+    </div>
+    <div class="container-box">
+        <div class="items">
+        <h1>Add Items</h1>
+</div>
+<!--
+<div class="form">
+   <form id="new-task-form">
+<input type="text" id="new-input" placeholder="">
+<input type="submit" id="new-task-submit" value="Submit"/>
+</div>
+</form>
+-->
+
+<!--
+<div id="tasks"> 
+    <div class="content">
+    <div class="task"><p>Item one</p></div>
+    <div class="task"><p>Item two</p></div>
+    <div class="task"><p>Item Three</p></div>
+    <div class="task"><p>Item Four</p></div>
+</div>
+
+</div>
+-->
+<div class="container">
+    <div id="newtask">
+        <input type="text" placeholder="">
+        <button id="push">Submit</button>
+</div>
+<h1 style="padding-left: 20px">Items</h1>
+
+<div id="tasks">
+</div>
+</div>
+</div>
+  </section>
+
+  <script type="text/javascript">
+    document.querySelector('#push').onclick = function() {
+        if(document.querySelector('#newtask input').value.length == 0){
+            alert("please enter a task")
+        }
+        else{
+            document.querySelector('#tasks').innerHTML += `
+            <div class="task">
+                <span id="taskname">
+                    ${document.querySelector('#newtask input').value}
+                    </span>
+                    </div>
+                    
+                    `
+        }
+
+
+    }
+
+  </script>
+
+</body>
+</html>
