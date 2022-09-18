@@ -1,14 +1,18 @@
 const letters = "abcdefghijklmnopqrstuvwxyz";
 function alphabetPosition(text) {
-    let result = [];
+    let ans = "";
     for (let i = 0; i < text.length; i++) {
-      let letter = text[i].toLowerCase();
-      if (letters.includes(letter)) {
-        result.push(letters.indexOf(letter) + 1);
+      ans = ans + '' +letters.indexOf(text[i])
+      
+        console.log(ans)
       }
-    }
-    return result.join(" ");
- }
+    
+    return result
+ 
+}
+console.log(alphabetPosition('developer'));
+console.log(alphabetPosition('decadev'));
+console.log(alphabetPosition('sucess'));
 
   module.exports = alphabetPosition
-  console.log(alphabetPosition('sucess'));
+  
